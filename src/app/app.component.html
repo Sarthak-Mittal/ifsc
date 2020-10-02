@@ -11,7 +11,7 @@
         <p class="lead sub-heading"><span class="display-4">IFSC</span> </p>
         <p *ngIf="!toogleDisplay">Indian Financial System Code</p>
         <p *ngIf="!toogleDisplay" class="lead sub-heading">
-          A code uniquely identifies each bank branch in India. Search below to know about your bank branch.
+          Enter code to get all the important information about the bank branch.
         </p>
       </div>
     </div>
@@ -20,7 +20,8 @@
   <div class="container">
     <form [formGroup]="bank" class="input-group">
       <input type="text" class="form-control" formControlName="ifsc"
-      placeholder="Enter IFSC Code" aria-label="Enter IFSC Code" 
+            placeholder="Enter IFSC Code" aria-label="Enter IFSC Code"
+            (keyup)="handleKeyUp($event)"
             aria-describedby="basic-addon2" required>
             <div class="input-group-append">
               <button class="btn btn-outline-secondary" type="button" [disabled]="!bank.valid" (click)="clear()">Clear</button>

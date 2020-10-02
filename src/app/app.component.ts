@@ -46,4 +46,10 @@ renderValues(){
   console.log("UPI:",this.bankDetails.UPI)
 }
 
+handleKeyUp(event){
+    if(event.keyCode === 13){
+      this.submit();
+    }
+}
+
 }
