@@ -33,7 +33,10 @@
   <div class="container displayArea" *ngIf="toogleDisplay">
     <div class="row">
       <div class="col-sm-6">
-        <dl class="my-dl"><dt class="my-dt">ADDRESS</dt><dd class="my-dd">{{bankDetails.ADDRESS}}</dd></dl>
+        <dl class="my-dl"><dt class="my-dt">ADDRESS</dt><dd class="my-dd">{{bankDetails.ADDRESS}}
+          <br><span class="myMapsBtn" (click)="redirectToGoogleMaps()">View on Google Maps</span>
+        </dd></dl>
+        
       </div>
       <div class="col-sm-3">
         <dl class="my-dl"><dt class="my-dt">BANK</dt><dd class="my-dd">{{bankDetails.BANK}}</dd></dl>

@@ -21,3 +21,10 @@
 .displayArea{
     padding: 20px;
 }
+
+.myMapsBtn{
+    font-size: 12px;
+    font-family: Roboto, Arial;
+    color: #3a84df;
+    cursor: pointer;
+}
