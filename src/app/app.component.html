@@ -19,10 +19,11 @@
   
   <div class="container">
     <form [formGroup]="bank" class="input-group">
-      <input type="text" class="form-control" formControlName="ifsc"
-            placeholder="Enter IFSC Code" aria-label="Enter IFSC Code"
-            (keyup)="handleKeyUp($event)"
+      <input type="text" class="form-control allCaps" formControlName="ifsc"
+            placeholder="IFSC Code" aria-label="IFSC Code"
+            (keyup)="handleKeyUp($event)" maxlength="11"
             aria-describedby="basic-addon2" required>
+
             <div class="input-group-append">
               <button class="btn btn-outline-secondary" type="button" [disabled]="!bank.valid" (click)="clear()">Clear</button>
               <button class="btn btn-outline-secondary" type="button" [disabled]="!bank.valid" (click)="submit()">Search</button>

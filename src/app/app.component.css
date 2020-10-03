@@ -28,3 +28,7 @@
     color: #3a84df;
     cursor: pointer;
 }
+
+.allCaps{
+    text-transform: uppercase;    
+}
