@@ -9,7 +9,6 @@ import { BankService } from './services/bank.service';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  toogleDisplay: boolean = false;
   bankDetails: BankDetails = null;
   bank = new FormGroup({
     ifsc: new FormControl('', Validators.required),
@@ -24,7 +23,6 @@ export class AppComponent {
     this.bankService.getBranchData(ifscCode).subscribe((data: BankDetails) => {
       this.bankDetails = data;
       console.log(this.bankDetails);
-      this.toogleDisplay = true;
       this.renderValues();
     });
   }
