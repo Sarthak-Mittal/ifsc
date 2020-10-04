@@ -64,25 +64,29 @@
     <div class="col-sm-3">
       <dl class="my-dl">
         <dt class="my-dt">UPI</dt>
-        <dd class="my-dd">{{bankDetails.UPI}}</dd>
+        <dd *ngIf="bankDetails.UPI" class="my-dd"><fa-icon [icon]="faCheckCircle"></fa-icon></dd>
+        <dd *ngIf="!bankDetails.UPI" class="my-dd"><fa-icon [icon]="faTimesCircle"></fa-icon></dd>
       </dl>
     </div>
     <div class="col-sm-3">
       <dl class="my-dl">
         <dt class="my-dt">NEFT</dt>
-        <dd class="my-dd">{{bankDetails.NEFT}}</dd>
+        <dd *ngIf="bankDetails.NEFT" class="my-dd"><fa-icon [icon]="faCheckCircle"></fa-icon></dd>
+        <dd *ngIf="!bankDetails.NEFT" class="my-dd"><fa-icon [icon]="faTimesCircle"></fa-icon></dd>
       </dl>
     </div>
     <div class="col-sm-3">
       <dl class="my-dl">
         <dt class="my-dt">RTGS</dt>
-        <dd class="my-dd">{{bankDetails.RTGS}}</dd>
+        <dd *ngIf="bankDetails.RTGS" class="my-dd"><fa-icon [icon]="faCheckCircle"></fa-icon></dd>
+        <dd *ngIf="!bankDetails.RTGS" class="my-dd"><fa-icon [icon]="faTimesCircle"></fa-icon></dd>
       </dl>
     </div>
     <div class="col-sm-3">
       <dl class="my-dl">
         <dt class="my-dt">IMPS</dt>
-        <dd class="my-dd">{{bankDetails.IMPS}}</dd>
+        <dd *ngIf="bankDetails.IMPS" class="my-dd"><fa-icon [icon]="faCheckCircle"></fa-icon></dd>
+        <dd *ngIf="!bankDetails.IMPS" class="my-dd"><fa-icon [icon]="faTimesCircle"></fa-icon></dd>
       </dl>
     </div>
   </div>
@@ -126,5 +130,4 @@
       </dl>
     </div>
   </div>
-
 </div>
