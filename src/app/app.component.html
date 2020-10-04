@@ -9,8 +9,8 @@
   <div class="container">
     <div class="d-inline">
       <p class="lead sub-heading"><span class="display-4">IFSC</span> </p>
-      <p *ngIf="!toogleDisplay">Indian Financial System Code</p>
-      <p *ngIf="!toogleDisplay" class="lead sub-heading">
+      <p *ngIf="!bank.valid">Indian Financial System Code</p>
+      <p *ngIf="!bank.valid" class="lead sub-heading">
         Enter code to get all the important information about the bank branch.
         <!-- Added temporarily to make it easy to test-->
           Sample IFSC <b><span (click)="copyText('ICIC0000816')">ICIC0000816</span></b> (Click to copy)
@@ -21,11 +21,20 @@
 
 <div class="container">
   <form [formGroup]="bank" class="input-group">
-    <input type="text" class="form-control allCaps" formControlName="ifsc" placeholder="IFSC Code"
-      aria-label="IFSC Code" (keyup)="handleKeyUp($event)" maxlength="11" aria-describedby="basic-addon2" required>
+
+    <input
+      type="search"
+      class="form-control allCaps clearable"
+      formControlName="ifsc"
+      placeholder="IFSC Code"
+      aria-label="IFSC Code"
+      (keyup)="handleKeyUp($event)"
+      maxlength="11"
+      aria-describedby="basic-addon2"
+      required
+    />
 
     <div class="input-group-append">
-      <button class="btn btn-outline-secondary" type="button" [disabled]="!bank.valid" (click)="clear()">Clear</button>
       <button class="btn btn-outline-secondary" type="button" [disabled]="!bank.valid" (click)="submit()">
         <span class="spinner-border spinner-border-sm search-spinner"
           [ngClass]="{'search-spinner--hide': !apiTransitState }" role="status" aria-hidden="true"></span>
@@ -44,18 +53,17 @@
           <br><span class="myMapsBtn" (click)="redirectToGoogleMaps()">View on Google Maps</span>
         </dd>
       </dl>
-
     </div>
     <div class="col-sm-3">
       <dl class="my-dl">
         <dt class="my-dt">BANK</dt>
-        <dd class="my-dd">{{bankDetails.BANK}}</dd>
+        <dd class="my-dd">{{ bankDetails.BANK }}</dd>
       </dl>
     </div>
     <div class="col-sm-3">
       <dl class="my-dl">
         <dt class="my-dt">BANKCODE</dt>
-        <dd class="my-dd">{{bankDetails.BANKCODE}}</dd>
+        <dd class="my-dd">{{ bankDetails.BANKCODE }}</dd>
       </dl>
     </div>
   </div>
@@ -91,42 +99,42 @@
     </div>
   </div>
 
-
   <div class="row">
     <div class="col-sm-2">
       <dl class="my-dl">
         <dt class="my-dt">BRANCH</dt>
-        <dd class="my-dd">{{bankDetails.BRANCH}}</dd>
+        <dd class="my-dd">{{ bankDetails.BRANCH }}</dd>
       </dl>
     </div>
     <div class="col-sm-2">
       <dl class="my-dl">
         <dt class="my-dt">CENTRE</dt>
-        <dd class="my-dd">{{bankDetails.CENTRE}}</dd>
+        <dd class="my-dd">{{ bankDetails.CENTRE }}</dd>
       </dl>
     </div>
     <div class="col-sm-2">
       <dl class="my-dl">
         <dt class="my-dt">CITY</dt>
-        <dd class="my-dd">{{bankDetails.CITY}}</dd>
+        <dd class="my-dd">{{ bankDetails.CITY }}</dd>
       </dl>
     </div>
     <div class="col-sm-2">
       <dl class="my-dl">
         <dt class="my-dt">DISTRICT</dt>
-        <dd class="my-dd">{{bankDetails.DISTRICT}}</dd>
+        <dd class="my-dd">{{ bankDetails.DISTRICT }}</dd>
+
       </dl>
     </div>
     <div class="col-sm-2">
       <dl class="my-dl">
         <dt class="my-dt">STATE</dt>
-        <dd class="my-dd">{{bankDetails.STATE}}</dd>
+        <dd class="my-dd">{{ bankDetails.STATE }}</dd>
       </dl>
     </div>
     <div class="col-sm-2">
       <dl class="my-dl">
         <dt class="my-dt">CONTACT</dt>
-        <dd class="my-dd">{{bankDetails.CONTACT}}</dd>
+        <dd class="my-dd">{{ bankDetails.CONTACT }}</dd>
       </dl>
     </div>
   </div>

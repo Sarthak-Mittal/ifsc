@@ -4,14 +4,13 @@ import { BankDetails } from './model/bank-details';
 import { BankService } from './services/bank.service';
 import { faCheckCircle, faTimesCircle } from '@fortawesome/free-solid-svg-icons';
 
-
-
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
+
 
   toogleDisplay: boolean = false;
   bankDetails: BankDetails = null;
@@ -22,9 +21,7 @@ export class AppComponent {
   faCheckCircle = faCheckCircle;
   faTimesCircle = faTimesCircle;
 
-  constructor(private bankService: BankService) {
-
-  }
+  constructor(private bankService: BankService) {}
 
   clear() {
     this.bank.reset();
@@ -65,6 +62,7 @@ export class AppComponent {
   }
 
   redirectToGoogleMaps() {
+
     const url = 'https://www.google.com/maps/search/?api=1&query=' +
       this.bankDetails.BANK + ', ' + this.bankDetails.ADDRESS;
     window.open(url, '_blank');

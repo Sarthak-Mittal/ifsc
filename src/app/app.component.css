@@ -43,3 +43,15 @@
 .search-spinner--hide {
     display: none;
 }
+
+.search-button {
+  background-color: #3a84df;
+  color: white;
+}
+
+.search-button:disabled {
+  background-color: white;
+  border-color: rgb(206, 212, 218);
+  color: lightgray;
+  opacity: 100%;
+}
