@@ -1,87 +1,140 @@
-  <div class="jumbotron jumbotron-fluid my-jumbotron">  
-    <div class="inner">
-      <nav class="nav nav-masthead justify-content-center">
-        <a class="nav-link active" href="#">Home</a>
-        <a class="nav-link" href="#">Features</a>
-        <a class="nav-link" href="#">Contact</a>
-      </nav>
-    </div>
-    <div class="container">
-      <div class="d-inline">
-        <p class="lead sub-heading"><span class="display-4">IFSC</span> </p>
-        <p *ngIf="!toogleDisplay">Indian Financial System Code</p>
-        <p *ngIf="!toogleDisplay" class="lead sub-heading">
-          Enter code to get all the important information about the bank branch.
-        </p>
-      </div>
-    </div>
+<div class="jumbotron jumbotron-fluid my-jumbotron">
+  <div class="inner">
+    <nav class="nav nav-masthead justify-content-center">
+      <a class="nav-link active" href="#">Home</a>
+      <a class="nav-link" href="#">Features</a>
+      <a class="nav-link" href="#">Contact</a>
+    </nav>
   </div>
-  
   <div class="container">
-    <form [formGroup]="bank" class="input-group">
-      <input type="text" class="form-control allCaps" formControlName="ifsc"
-            placeholder="IFSC Code" aria-label="IFSC Code"
-            (keyup)="handleKeyUp($event)" maxlength="11"
-            aria-describedby="basic-addon2" required>
+    <div class="d-inline">
+      <p class="lead sub-heading"><span class="display-4">IFSC</span></p>
+      <p *ngIf="!toogleDisplay">Indian Financial System Code</p>
+      <p *ngIf="!toogleDisplay" class="lead sub-heading">
+        Enter code to get all the important information about the bank branch.
+      </p>
+    </div>
+  </div>
+</div>
 
-            <div class="input-group-append">
-              <button class="btn btn-outline-secondary" type="button" [disabled]="!bank.valid" (click)="clear()">Clear</button>
-              <button class="btn btn-outline-secondary" type="button" [disabled]="!bank.valid" (click)="submit()">Search</button>
-            </div>
+<div class="container">
+  <form [formGroup]="bank" class="input-group">
+    <input
+      type="search"
+      class="form-control allCaps clearable"
+      formControlName="ifsc"
+      placeholder="IFSC Code"
+      aria-label="IFSC Code"
+      (keyup)="handleKeyUp($event)"
+      maxlength="11"
+      aria-describedby="basic-addon2"
+      required
+    />
+
+    <div class="input-group-append">
+      <button
+        class="btn btn-outline-secondary search-button"
+        type="button"
+        [disabled]="!bank.valid"
+        (click)="submit()"
+      >
+        Search
+      </button>
+    </div>
   </form>
-  </div>
-  
-  <div class="container displayArea" *ngIf="toogleDisplay">
-    <div class="row">
-      <div class="col-sm-6">
-        <dl class="my-dl"><dt class="my-dt">ADDRESS</dt><dd class="my-dd">{{bankDetails.ADDRESS}}
-          <br><span class="myMapsBtn" (click)="redirectToGoogleMaps()">View on Google Maps</span>
-        </dd></dl>
-        
-      </div>
-      <div class="col-sm-3">
-        <dl class="my-dl"><dt class="my-dt">BANK</dt><dd class="my-dd">{{bankDetails.BANK}}</dd></dl>
-      </div>
-      <div class="col-sm-3">
-        <dl class="my-dl"><dt class="my-dt">BANKCODE</dt><dd class="my-dd">{{bankDetails.BANKCODE}}</dd></dl>
-      </div>
-    </div>
-  
-    <div class="row">
-      <div class="col-sm-3">
-        <dl class="my-dl"><dt class="my-dt">UPI</dt><dd class="my-dd">{{bankDetails.UPI}}</dd></dl>
-      </div>
-      <div class="col-sm-3">
-        <dl class="my-dl"><dt class="my-dt">NEFT</dt><dd class="my-dd">{{bankDetails.NEFT}}</dd></dl>
-      </div>
-      <div class="col-sm-3">
-        <dl class="my-dl"><dt class="my-dt">RTGS</dt><dd class="my-dd">{{bankDetails.RTGS}}</dd></dl>
-      </div>
-      <div class="col-sm-3">
-        <dl class="my-dl"><dt class="my-dt">IMPS</dt><dd class="my-dd">{{bankDetails.IMPS}}</dd></dl>
-      </div>   
-    </div>
-      
+</div>
 
-    <div class="row">
-      <div class="col-sm-2">
-        <dl class="my-dl"><dt class="my-dt">BRANCH</dt><dd class="my-dd">{{bankDetails.BRANCH}}</dd></dl>
-      </div>
-      <div class="col-sm-2">
-        <dl class="my-dl"><dt class="my-dt">CENTRE</dt><dd class="my-dd">{{bankDetails.CENTRE}}</dd></dl>
-      </div>
-      <div class="col-sm-2">
-        <dl class="my-dl"><dt class="my-dt">CITY</dt><dd class="my-dd">{{bankDetails.CITY}}</dd></dl>
-      </div>
-      <div class="col-sm-2">
-        <dl class="my-dl"><dt class="my-dt">DISTRICT</dt><dd class="my-dd">{{bankDetails.DISTRICT}}</dd></dl>
-      </div>
-      <div class="col-sm-2">
-        <dl class="my-dl"><dt class="my-dt">STATE</dt><dd class="my-dd">{{bankDetails.STATE}}</dd></dl>
-      </div>
-      <div class="col-sm-2">
-        <dl class="my-dl"><dt class="my-dt">CONTACT</dt><dd class="my-dd">{{bankDetails.CONTACT}}</dd></dl>
-      </div>
+<div class="container displayArea" *ngIf="toogleDisplay">
+  <div class="row">
+    <div class="col-sm-6">
+      <dl class="my-dl">
+        <dt class="my-dt">ADDRESS</dt>
+        <dd class="my-dd">
+          {{ bankDetails.ADDRESS }} <br /><span
+            class="myMapsBtn"
+            (click)="redirectToGoogleMaps()"
+            >View on Google Maps</span
+          >
+        </dd>
+      </dl>
     </div>
-
+    <div class="col-sm-3">
+      <dl class="my-dl">
+        <dt class="my-dt">BANK</dt>
+        <dd class="my-dd">{{ bankDetails.BANK }}</dd>
+      </dl>
+    </div>
+    <div class="col-sm-3">
+      <dl class="my-dl">
+        <dt class="my-dt">BANKCODE</dt>
+        <dd class="my-dd">{{ bankDetails.BANKCODE }}</dd>
+      </dl>
+    </div>
   </div>
+
+  <div class="row">
+    <div class="col-sm-3">
+      <dl class="my-dl">
+        <dt class="my-dt">UPI</dt>
+        <dd class="my-dd">{{ bankDetails.UPI }}</dd>
+      </dl>
+    </div>
+    <div class="col-sm-3">
+      <dl class="my-dl">
+        <dt class="my-dt">NEFT</dt>
+        <dd class="my-dd">{{ bankDetails.NEFT }}</dd>
+      </dl>
+    </div>
+    <div class="col-sm-3">
+      <dl class="my-dl">
+        <dt class="my-dt">RTGS</dt>
+        <dd class="my-dd">{{ bankDetails.RTGS }}</dd>
+      </dl>
+    </div>
+    <div class="col-sm-3">
+      <dl class="my-dl">
+        <dt class="my-dt">IMPS</dt>
+        <dd class="my-dd">{{ bankDetails.IMPS }}</dd>
+      </dl>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-2">
+      <dl class="my-dl">
+        <dt class="my-dt">BRANCH</dt>
+        <dd class="my-dd">{{ bankDetails.BRANCH }}</dd>
+      </dl>
+    </div>
+    <div class="col-sm-2">
+      <dl class="my-dl">
+        <dt class="my-dt">CENTRE</dt>
+        <dd class="my-dd">{{ bankDetails.CENTRE }}</dd>
+      </dl>
+    </div>
+    <div class="col-sm-2">
+      <dl class="my-dl">
+        <dt class="my-dt">CITY</dt>
+        <dd class="my-dd">{{ bankDetails.CITY }}</dd>
+      </dl>
+    </div>
+    <div class="col-sm-2">
+      <dl class="my-dl">
+        <dt class="my-dt">DISTRICT</dt>
+        <dd class="my-dd">{{ bankDetails.DISTRICT }}</dd>
+      </dl>
+    </div>
+    <div class="col-sm-2">
+      <dl class="my-dl">
+        <dt class="my-dt">STATE</dt>
+        <dd class="my-dd">{{ bankDetails.STATE }}</dd>
+      </dl>
+    </div>
+    <div class="col-sm-2">
+      <dl class="my-dl">
+        <dt class="my-dt">CONTACT</dt>
+        <dd class="my-dd">{{ bankDetails.CONTACT }}</dd>
+      </dl>
+    </div>
+  </div>
+</div>
