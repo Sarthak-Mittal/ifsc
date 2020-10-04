@@ -1,7 +1,7 @@
 # IFSC: Indian Financial System Code
 
+#### Go to check it out here [here](https://sarthak-mittal.github.io/ifsc/) 
 
-### Live @ sarthak-mittal.github.io/ifsc/
 ---
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) 
 ![GitHub repo size](https://img.shields.io/github/repo-size/Sarthak-Mittal/Ifsc)
