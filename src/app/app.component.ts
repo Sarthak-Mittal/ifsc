@@ -12,49 +12,58 @@ import { BankService } from './services/bank.service';
 })
 export class AppComponent {
 
-  toogleDisplay : boolean = false;
-  bankDetails : BankDetails = null;
+  toogleDisplay: boolean = false;
+  bankDetails: BankDetails = null;
+  apiTransitState: boolean = false;
   bank = new FormGroup({
-    ifsc : new FormControl('', Validators.required)
-  })  
-   
-  constructor(private bankService: BankService){
+    ifsc: new FormControl('', Validators.required)
+  });
+
+  constructor(private bankService: BankService) {
 
   }
 
-  clear(){
-    this.bank.reset()
+  clear() {
+    this.bank.reset();
     this.toogleDisplay = false;
   }
- 
-  submit(){
-    let ifscCode = this.bank.controls['ifsc'].value 
-    console.log("ifsc::",ifscCode)
+
+  submit() {
+    const ifscCode = this.bank.controls['ifsc'].value;
+    console.log('ifsc::', ifscCode);
+    this.apiTransitState = true;
 
     this.bankService.getBranchData(ifscCode).subscribe(
       (data: BankDetails) => {
-        this.bankDetails = data
-        console.log(this.bankDetails)
+        this.bankDetails = data;
+        console.log(this.bankDetails);
         this.toogleDisplay = true;
-        this.renderValues()
+        this.apiTransitState = false;
+        this.renderValues();
+      },
+      (error) => {
+        console.log(error);
+        this.bankDetails = null;
+        this.toogleDisplay = false;
+        this.apiTransitState = false;
       }
-    )
-     
+    );
+
   }
 
-renderValues(){
-  console.log("UPI:",this.bankDetails.UPI)
-}
+  renderValues() {
+    console.log('UPI:', this.bankDetails.UPI);
+  }
 
-handleKeyUp(event){
-    if(event.keyCode === 13){
+  handleKeyUp(event) {
+    if (event.keyCode === 13) {
       this.submit();
     }
-}
+  }
 
-redirectToGoogleMaps(){
-  let url = "https://www.google.com/maps/search/?api=1&query=" + 
-              this.bankDetails.BANK +', '+ this.bankDetails.ADDRESS 
-  window.open(url, "_blank");
-}
+  redirectToGoogleMaps() {
+    const url = 'https://www.google.com/maps/search/?api=1&query=' +
+      this.bankDetails.BANK + ', ' + this.bankDetails.ADDRESS;
+    window.open(url, '_blank');
+  }
 }
