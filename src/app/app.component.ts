@@ -23,11 +23,6 @@ export class AppComponent {
 
   constructor(private bankService: BankService) {}
 
-  clear() {
-    this.bank.reset();
-    this.toogleDisplay = false;
-  }
-
   submit() {
     const ifscCode = this.bank.controls['ifsc'].value;
     console.log('ifsc::', ifscCode);
@@ -39,7 +34,6 @@ export class AppComponent {
         console.log(this.bankDetails);
         this.toogleDisplay = true;
         this.apiTransitState = false;
-        this.renderValues();
       },
       (error) => {
         console.log(error);
@@ -49,10 +43,6 @@ export class AppComponent {
       }
     );
 
-  }
-
-  renderValues() {
-    console.log('UPI:', this.bankDetails.UPI);
   }
 
   handleKeyUp(event) {

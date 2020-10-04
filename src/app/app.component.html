@@ -9,8 +9,8 @@
   <div class="container">
     <div class="d-inline">
       <p class="lead sub-heading"><span class="display-4">IFSC</span> </p>
-      <p *ngIf="!bank.valid">Indian Financial System Code</p>
-      <p *ngIf="!bank.valid" class="lead sub-heading">
+      <p>Indian Financial System Code</p>
+      <p class="lead sub-heading">
         Enter code to get all the important information about the bank branch.
         <!-- Added temporarily to make it easy to test-->
           Sample IFSC <b><span (click)="copyText('ICIC0000816')">ICIC0000816</span></b> (Click to copy)
@@ -26,8 +26,8 @@
       type="search"
       class="form-control allCaps clearable"
       formControlName="ifsc"
-      placeholder="IFSC Code"
-      aria-label="IFSC Code"
+      placeholder="IFSC"
+      aria-label="IFSC"
       (keyup)="handleKeyUp($event)"
       maxlength="11"
       aria-describedby="basic-addon2"
@@ -35,7 +35,7 @@
     />
 
     <div class="input-group-append">
-      <button class="btn btn-outline-secondary" type="button" [disabled]="!bank.valid" (click)="submit()">
+      <button class="btn btn-outline-secondary search-button" type="button" [disabled]="!bank.valid" (click)="submit()">
         <span class="spinner-border spinner-border-sm search-spinner"
           [ngClass]="{'search-spinner--hide': !apiTransitState }" role="status" aria-hidden="true"></span>
         <span>Search</span>
@@ -70,31 +70,31 @@
 
   <div class="row">
     <div class="col-sm-3">
-      <dl class="my-dl">
+      <dl class="my-dl flex-dl">
         <dt class="my-dt">UPI</dt>
-        <dd *ngIf="bankDetails.UPI" class="my-dd"><fa-icon [icon]="faCheckCircle"></fa-icon></dd>
-        <dd *ngIf="!bankDetails.UPI" class="my-dd"><fa-icon [icon]="faTimesCircle"></fa-icon></dd>
+        <dd *ngIf="bankDetails.UPI" class="my-dd"><fa-icon class="valid-icon" [icon]="faCheckCircle"></fa-icon></dd>
+        <dd *ngIf="!bankDetails.UPI" class="my-dd"><fa-icon class="invalid-icon" [icon]="faTimesCircle"></fa-icon></dd>
       </dl>
     </div>
     <div class="col-sm-3">
-      <dl class="my-dl">
+      <dl class="my-dl flex-dl">
         <dt class="my-dt">NEFT</dt>
-        <dd *ngIf="bankDetails.NEFT" class="my-dd"><fa-icon [icon]="faCheckCircle"></fa-icon></dd>
-        <dd *ngIf="!bankDetails.NEFT" class="my-dd"><fa-icon [icon]="faTimesCircle"></fa-icon></dd>
+        <dd *ngIf="bankDetails.NEFT" class="my-dd"><fa-icon class="valid-icon" [icon]="faCheckCircle"></fa-icon></dd>
+        <dd *ngIf="!bankDetails.NEFT" class="my-dd"><fa-icon class="invalid-icon" [icon]="faTimesCircle"></fa-icon></dd>
       </dl>
     </div>
     <div class="col-sm-3">
-      <dl class="my-dl">
+      <dl class="my-dl flex-dl">
         <dt class="my-dt">RTGS</dt>
-        <dd *ngIf="bankDetails.RTGS" class="my-dd"><fa-icon [icon]="faCheckCircle"></fa-icon></dd>
-        <dd *ngIf="!bankDetails.RTGS" class="my-dd"><fa-icon [icon]="faTimesCircle"></fa-icon></dd>
+        <dd *ngIf="bankDetails.RTGS" class="my-dd"><fa-icon class="valid-icon" [icon]="faCheckCircle"></fa-icon></dd>
+        <dd *ngIf="!bankDetails.RTGS" class="my-dd"><fa-icon class="invalid-icon" [icon]="faTimesCircle"></fa-icon></dd>
       </dl>
     </div>
     <div class="col-sm-3">
-      <dl class="my-dl">
+      <dl class="my-dl flex-dl">
         <dt class="my-dt">IMPS</dt>
-        <dd *ngIf="bankDetails.IMPS" class="my-dd"><fa-icon [icon]="faCheckCircle"></fa-icon></dd>
-        <dd *ngIf="!bankDetails.IMPS" class="my-dd"><fa-icon [icon]="faTimesCircle"></fa-icon></dd>
+        <dd *ngIf="bankDetails.IMPS" class="my-dd"><fa-icon class="valid-icon" [icon]="faCheckCircle"></fa-icon></dd>
+        <dd *ngIf="!bankDetails.IMPS" class="my-dd"><fa-icon class="invalid-icon" [icon]="faTimesCircle"></fa-icon></dd>
       </dl>
     </div>
   </div>

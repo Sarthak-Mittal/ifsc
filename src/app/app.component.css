@@ -8,6 +8,10 @@
     font-size: 16px;
 }
 
+.flex-dl{
+    display: flex;
+}
+
 .my-dl {
     display: flexbox;
 }
@@ -54,4 +58,12 @@
   border-color: rgb(206, 212, 218);
   color: lightgray;
   opacity: 100%;
+}
+
+.valid-icon{
+    color: rgb(21, 197, 5);
+}
+
+.invalid-icon{
+    color: rgb(250, 26, 26);
 }
