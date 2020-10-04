@@ -11,8 +11,7 @@ import { faCheckCircle, faTimesCircle } from '@fortawesome/free-solid-svg-icons'
 })
 export class AppComponent {
 
-
-  toogleDisplay: boolean = false;
+  toggleDisplay: boolean = false;
   bankDetails: BankDetails = null;
   apiTransitState: boolean = false;
   bank = new FormGroup({
@@ -32,13 +31,13 @@ export class AppComponent {
       (data: BankDetails) => {
         this.bankDetails = data;
         console.log(this.bankDetails);
-        this.toogleDisplay = true;
+        this.toggleDisplay = true;
         this.apiTransitState = false;
       },
       (error) => {
         console.log(error);
         this.bankDetails = null;
-        this.toogleDisplay = false;
+        this.toggleDisplay = false;
         this.apiTransitState = false;
       }
     );
