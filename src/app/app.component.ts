@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { FormGroup, FormControl, Validator, Validators } from '@angular/forms';
 import { BankDetails } from './model/bank-details';
 import { BankService } from './services/bank.service';
+import { faCheckCircle, faTimesCircle } from '@fortawesome/free-solid-svg-icons';
 
 
 
@@ -18,6 +19,8 @@ export class AppComponent {
   bank = new FormGroup({
     ifsc: new FormControl('', Validators.required)
   });
+  faCheckCircle = faCheckCircle;
+  faTimesCircle = faTimesCircle;
 
   constructor(private bankService: BankService) {
 
