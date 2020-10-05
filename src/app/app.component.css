@@ -53,13 +53,6 @@
   color: white;
 }
 
-/* .search-button:disabled {
-  background-color: white;
-  border-color: rgb(206, 212, 218);
-  color: lightgray;
-  opacity: 100%;
-} */
-
 .valid-icon {
   color: rgb(21, 197, 5);
 }
@@ -67,6 +60,7 @@
 .invalid-icon {
   color: rgb(250, 26, 26);
 }
-.jumbotron_custom {
+
+.jumbotron-custom {
   box-shadow: 10px 4px 40px 10px rgba(99, 99, 99, 0.47);
 }
