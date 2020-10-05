@@ -57,6 +57,18 @@
 
 <div class="container displayArea" *ngIf="toggleDisplay">
   <div class="row">
+    <div class="col-6 col-sm-6 col-md-3">
+      <dl class="my-dl">
+        <dt class="my-dt">BANK</dt>
+        <dd class="my-dd">{{ bankDetails.BANK }}</dd>
+      </dl>
+    </div>
+    <div class="col-6 col-sm-6 col-md-3">
+      <dl class="my-dl">
+        <dt class="my-dt">CONTACT</dt>
+        <dd class="my-dd">{{ bankDetails.CONTACT }}</dd>
+      </dl>
+    </div>
     <div class="col-12 col-sm-12 col-md-6">
       <dl class="my-dl">
         <dt class="my-dt">ADDRESS</dt>
@@ -68,18 +80,6 @@
             >View on Google Maps
           </span>
         </dd>
-      </dl>
-    </div>
-    <div class="col-6 col-sm-6 col-md-3">
-      <dl class="my-dl">
-        <dt class="my-dt">BANK</dt>
-        <dd class="my-dd">{{ bankDetails.BANK }}</dd>
-      </dl>
-    </div>
-    <div class="col-6 col-sm-6 col-md-3">
-      <dl class="my-dl">
-        <dt class="my-dt">BANKCODE</dt>
-        <dd class="my-dd">{{ bankDetails.BANKCODE }}</dd>
       </dl>
     </div>
   </div>
@@ -134,6 +134,12 @@
   <div class="row">
     <div class="col-6 col-sm-4 col-md-2">
       <dl class="my-dl">
+        <dt class="my-dt">BANKCODE</dt>
+        <dd class="my-dd">{{ bankDetails.BANKCODE }}</dd>
+      </dl>
+    </div>
+    <div class="col-6 col-sm-4 col-md-2">
+      <dl class="my-dl">
         <dt class="my-dt">BRANCH</dt>
         <dd class="my-dd">{{ bankDetails.BRANCH }}</dd>
       </dl>
@@ -160,12 +166,6 @@
       <dl class="my-dl">
         <dt class="my-dt">STATE</dt>
         <dd class="my-dd">{{ bankDetails.STATE }}</dd>
-      </dl>
-    </div>
-    <div class="col-6 col-sm-4 col-md-2">
-      <dl class="my-dl">
-        <dt class="my-dt">CONTACT</dt>
-        <dd class="my-dd">{{ bankDetails.CONTACT }}</dd>
       </dl>
     </div>
   </div>
