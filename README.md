@@ -1,22 +1,24 @@
 # IFSC: Indian Financial System Code
 
-#### Go to check it out here [here](https://sarthak-mittal.github.io/ifsc/) 
+#### Go to check it out here [here](https://sarthak-mittal.github.io/ifsc/)
 
 ---
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) 
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 ![GitHub repo size](https://img.shields.io/github/repo-size/Sarthak-Mittal/Ifsc)
 ![GitHub contributors](https://img.shields.io/github/contributors/Sarthak-Mittal/Ifsc)
 ![GitHub stars](https://img.shields.io/github/stars/Sarthak-Mittal/Ifsc?style=social)
 ![GitHub forks](https://img.shields.io/github/forks/Sarthak-Mittal/Ifsc?style=social)
---- 
+
+---
 
 ## Table of Contents
 
-* [Introduction](#Introduction)
-* [Description](#Description)
-* [Technologies Using](#Technologies-used)
-* [Contributers Guide](#Contributers-Guide)
-* [Getting Started - Local Development](#Getting-Started)
+- [Introduction](#Introduction)
+- [Description](#Description)
+- [Technologies Using](#Technologies-used)
+- [Contributers Guide](#Contributers-Guide)
+- [Getting Started - Local Development](#Getting-Started)
 
 ---
 
@@ -24,23 +26,23 @@
 
 This project aims to help you get your bank details with your IFSC code. I tend to forget where my bank branch is located or does it offer services like UPI, NEFT, RTGS or IMPS.
 
-So I think this will help serve the purpose for people who might want to look up some information about their bank branch. 
+So I think this will help serve the purpose for people who might want to look up some information about their bank branch.
 
---- 
+---
 
 ## Description
 
 On the frontend we are using Angular and on the backend we are hitting a free API provided by [Razorpay](https://razorpay.com/). To know about API @ [Razorpay IFSC Toolkit](https://ifsc.razorpay.com/)
 
---- 
+---
 
 ## Technologies Using
- 
+
 [Angular](https://v9.angular.io/docs) 9.1.0.
 
 [Bootstrap](https://getbootstrap.com/docs/4.0/getting-started/introduction/) 4.5.2.
- 
---- 
+
+---
 
 ## Contributers Guide
 
@@ -54,10 +56,14 @@ To contribute to hassle free, follow these steps:
 
 Alternatively see the GitHub documentation on [creating a pull request](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request).
 
-
 ---
 
 ## Getting Started
+
+## Glimpse of UI
+
+**HOME**
+![Screenshot](../master/home.png)
 
 ### To get started locally, follow these instructions:
 

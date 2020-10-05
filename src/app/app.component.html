@@ -1,4 +1,4 @@
-<div class="jumbotron jumbotron-fluid my-jumbotron">
+<div class="jumbotron jumbotron-fluid my-jumbotron jumbotron_custom">
   <div class="inner">
     <nav class="nav nav-masthead justify-content-center">
       <a class="nav-link active" href="#">Home</a>
@@ -8,20 +8,22 @@
   </div>
   <div class="container">
     <div class="d-inline">
-      <p class="lead sub-heading"><span class="display-4">IFSC</span> </p>
-      <p>Indian Financial System Code</p>
+      <p class="lead sub-heading"><span class="display-4">IFSC</span></p>
+      <b>Indian Financial System Code</b>
       <p class="lead sub-heading">
         Enter code to get all the important information about the bank branch.
         <!-- Added temporarily to make it easy to test-->
-          Sample IFSC <b><span (click)="copyText('ICIC0000816')">ICIC0000816</span></b> (Click to copy)
+        Sample IFSC
+        <b><span (click)="copyText('ICIC0000816')">ICIC0000816</span></b> (Click
+        to copy)
       </p>
     </div>
   </div>
 </div>
-
+<br />
+<br />
 <div class="container">
   <form [formGroup]="bank" class="input-group">
-
     <input
       type="search"
       class="form-control allCaps clearable"
@@ -35,9 +37,18 @@
     />
 
     <div class="input-group-append">
-      <button class="btn btn-outline-secondary search-button" type="button" [disabled]="!bank.valid" (click)="submit()">
-        <span class="spinner-border spinner-border-sm search-spinner"
-          [ngClass]="{'search-spinner--hide': !apiTransitState }" role="status" aria-hidden="true"></span>
+      <button
+        class="btn btn-outline-secondary search-button"
+        type="button"
+        [disabled]="!bank.valid"
+        (click)="submit()"
+      >
+        <span
+          class="spinner-border spinner-border-sm search-spinner"
+          [ngClass]="{ 'search-spinner--hide': !apiTransitState }"
+          role="status"
+          aria-hidden="true"
+        ></span>
         <span>Search</span>
       </button>
     </div>
@@ -49,8 +60,12 @@
     <div class="col-sm-6">
       <dl class="my-dl">
         <dt class="my-dt">ADDRESS</dt>
-        <dd class="my-dd">{{bankDetails.ADDRESS}}
-          <br><span class="myMapsBtn" (click)="redirectToGoogleMaps()">View on Google Maps</span>
+        <dd class="my-dd">
+          {{ bankDetails.ADDRESS }} <br /><span
+            class="myMapsBtn"
+            (click)="redirectToGoogleMaps()"
+            >View on Google Maps</span
+          >
         </dd>
       </dl>
     </div>
@@ -72,29 +87,45 @@
     <div class="col-sm-3">
       <dl class="my-dl flex-dl">
         <dt class="my-dt">UPI</dt>
-        <dd *ngIf="bankDetails.UPI" class="my-dd"><fa-icon class="valid-icon" [icon]="faCheckCircle"></fa-icon></dd>
-        <dd *ngIf="!bankDetails.UPI" class="my-dd"><fa-icon class="invalid-icon" [icon]="faTimesCircle"></fa-icon></dd>
+        <dd *ngIf="bankDetails.UPI" class="my-dd">
+          <fa-icon class="valid-icon" [icon]="faCheckCircle"></fa-icon>
+        </dd>
+        <dd *ngIf="!bankDetails.UPI" class="my-dd">
+          <fa-icon class="invalid-icon" [icon]="faTimesCircle"></fa-icon>
+        </dd>
       </dl>
     </div>
     <div class="col-sm-3">
       <dl class="my-dl flex-dl">
         <dt class="my-dt">NEFT</dt>
-        <dd *ngIf="bankDetails.NEFT" class="my-dd"><fa-icon class="valid-icon" [icon]="faCheckCircle"></fa-icon></dd>
-        <dd *ngIf="!bankDetails.NEFT" class="my-dd"><fa-icon class="invalid-icon" [icon]="faTimesCircle"></fa-icon></dd>
+        <dd *ngIf="bankDetails.NEFT" class="my-dd">
+          <fa-icon class="valid-icon" [icon]="faCheckCircle"></fa-icon>
+        </dd>
+        <dd *ngIf="!bankDetails.NEFT" class="my-dd">
+          <fa-icon class="invalid-icon" [icon]="faTimesCircle"></fa-icon>
+        </dd>
       </dl>
     </div>
     <div class="col-sm-3">
       <dl class="my-dl flex-dl">
         <dt class="my-dt">RTGS</dt>
-        <dd *ngIf="bankDetails.RTGS" class="my-dd"><fa-icon class="valid-icon" [icon]="faCheckCircle"></fa-icon></dd>
-        <dd *ngIf="!bankDetails.RTGS" class="my-dd"><fa-icon class="invalid-icon" [icon]="faTimesCircle"></fa-icon></dd>
+        <dd *ngIf="bankDetails.RTGS" class="my-dd">
+          <fa-icon class="valid-icon" [icon]="faCheckCircle"></fa-icon>
+        </dd>
+        <dd *ngIf="!bankDetails.RTGS" class="my-dd">
+          <fa-icon class="invalid-icon" [icon]="faTimesCircle"></fa-icon>
+        </dd>
       </dl>
     </div>
     <div class="col-sm-3">
       <dl class="my-dl flex-dl">
         <dt class="my-dt">IMPS</dt>
-        <dd *ngIf="bankDetails.IMPS" class="my-dd"><fa-icon class="valid-icon" [icon]="faCheckCircle"></fa-icon></dd>
-        <dd *ngIf="!bankDetails.IMPS" class="my-dd"><fa-icon class="invalid-icon" [icon]="faTimesCircle"></fa-icon></dd>
+        <dd *ngIf="bankDetails.IMPS" class="my-dd">
+          <fa-icon class="valid-icon" [icon]="faCheckCircle"></fa-icon>
+        </dd>
+        <dd *ngIf="!bankDetails.IMPS" class="my-dd">
+          <fa-icon class="invalid-icon" [icon]="faTimesCircle"></fa-icon>
+        </dd>
       </dl>
     </div>
   </div>
@@ -122,7 +153,6 @@
       <dl class="my-dl">
         <dt class="my-dt">DISTRICT</dt>
         <dd class="my-dd">{{ bankDetails.DISTRICT }}</dd>
-
       </dl>
     </div>
     <div class="col-sm-2">
