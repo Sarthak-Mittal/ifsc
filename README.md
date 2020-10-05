@@ -89,4 +89,4 @@ if (thisRepo.isAwesome()) {
 
 <sub><strong>If you find a bug or think something could be better, please file an issue! If you think a code change should be made, feel free to raise a PR.</strong></sub>
 
-[![Open Source Love](https://badges.frapsoft.com/os/v2/open-source.svg?v=103)](https://github.com/vinitshahdeo) [![GitHub followers](https://img.shields.io/github/followers/sarthak-mittal.svg?label=follow%20@sarthak-mittal&style=flat&logo=github)](https://github.com/sarthak-mittal/)
+[![Open Source Love](https://badges.frapsoft.com/os/v2/open-source.svg?v=103)](https://github.com/sarthak-mittal) [![GitHub followers](https://img.shields.io/github/followers/sarthak-mittal.svg?label=follow%20@sarthak-mittal&style=flat&logo=github)](https://github.com/sarthak-mittal/)
