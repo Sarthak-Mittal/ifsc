@@ -1,6 +1,6 @@
 # IFSC: Indian Financial System Code
 
-#### Go to check it out here [here](https://sarthak-mittal.github.io/ifsc/)
+Go to check it out here [here](https://sarthak-mittal.github.io/ifsc/)
 
 ---
 
@@ -28,21 +28,21 @@ This project aims to help you get your bank details with your IFSC code. I tend 
 
 So I think this will help serve the purpose for people who might want to look up some information about their bank branch.
 
----
+
 
 ## Description
 
 On the frontend we are using Angular and on the backend we are hitting a free API provided by [Razorpay](https://razorpay.com/). To know about API @ [Razorpay IFSC Toolkit](https://ifsc.razorpay.com/)
 
----
+
 
 ## Technologies Using
 
-[Angular](https://v9.angular.io/docs) 9.1.0.
+- [Angular](https://v9.angular.io/docs) 9.1.0.
 
-[Bootstrap](https://getbootstrap.com/docs/4.0/getting-started/introduction/) 4.5.2.
+- [Bootstrap](https://getbootstrap.com/docs/4.0/getting-started/introduction/) 4.5.2.
 
----
+
 
 ## Contributers Guide
 
@@ -56,14 +56,9 @@ To contribute to hassle free, follow these steps:
 
 Alternatively see the GitHub documentation on [creating a pull request](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request).
 
----
+
 
 ## Getting Started
-
-## Glimpse of UI
-
-**HOME**
-![Screenshot](../master/home.png)
 
 ### To get started locally, follow these instructions:
 
