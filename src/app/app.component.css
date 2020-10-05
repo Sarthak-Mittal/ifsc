@@ -53,12 +53,12 @@
   color: white;
 }
 
-.search-button:disabled {
+/* .search-button:disabled {
   background-color: white;
   border-color: rgb(206, 212, 218);
   color: lightgray;
   opacity: 100%;
-}
+} */
 
 .valid-icon{
     color: rgb(21, 197, 5);
