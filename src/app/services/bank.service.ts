@@ -14,11 +14,11 @@ const ROOT_URL : string = "https://ifsc.razorpay.com/"
   providedIn: 'root'
 })
 export class BankService {
-  
+
   constructor(private http: HttpClient) {}
-  
+
   getBranchData(code: string): Observable<BankDetails>{
      return this.http.get<BankDetails>(ROOT_URL + code)
-        
+
   }
 }
