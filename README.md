@@ -73,3 +73,20 @@ Alternatively see the GitHub documentation on [creating a pull request](https://
 3. Build and run your app by using the `ng serve` command from the root directory.
 4. Navigate your browser to `http://localhost:4200`.
 5. Make sure you have running internet connection to successfully hit API mentioned in [Description](#Description).
+
+
+
+
+
+
+```javascript
+if (thisRepo.isAwesome()) {
+  // thanks in advance :p
+  starThisRepository();
+}
+
+```
+
+<sub><strong>If you find a bug or think something could be better, please file an issue! If you think a code change should be made, feel free to raise a PR.</strong></sub>
+
+[![Open Source Love](https://badges.frapsoft.com/os/v2/open-source.svg?v=103)](https://github.com/vinitshahdeo) [![GitHub followers](https://img.shields.io/github/followers/sarthak-mittal.svg?label=follow%20@sarthak-mittal&style=flat&logo=github)](https://github.com/sarthak-mittal/)
