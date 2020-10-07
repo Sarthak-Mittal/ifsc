@@ -1,0 +1,59 @@
+ 
+  .sub-heading {
+    font-size: 16px;
+  }
+  
+  .flex-dl {
+    display: flex;
+  }
+  
+  .my-dl {
+    display: flexbox;
+  }
+  
+  .my-dt {
+    padding: 4px 10px;
+  }
+  
+  .my-dd {
+    padding: 4px 10px;
+  }
+  
+  .displayArea {
+    padding: 20px;
+  }
+  
+  .myMapsBtn {
+    font-size: 12px;
+    font-family: Roboto, Arial;
+    color: #3a84df;
+    cursor: pointer;
+  }
+  
+  .allCaps {
+    text-transform: uppercase;
+  }
+  
+  .search-spinner {
+    margin-right: 4px;
+    margin-bottom: 1px;
+  }
+  
+  .search-spinner--hide {
+    display: none;
+  }
+  
+  .search-button {
+    background-color: #3a84df;
+    color: white;
+  }
+  
+  .valid-icon {
+    color: rgb(21, 197, 5);
+  }
+  
+  .invalid-icon {
+    color: rgb(250, 26, 26);
+  }
+  
+  
