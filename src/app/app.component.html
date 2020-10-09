@@ -1,8 +1,12 @@
-<div class="jumbotron my-jumbotron">
-  <nav class="nav nav-masthead justify-content-center">
-    <a class="nav-link" routerLink="/home" routerLinkActive="active">Home</a>
-    <a class="nav-link" routerLink="/about" routerLinkActive="active">About</a>
-    <a class="nav-link" routerLink="/contribute" routerLinkActive="active">Contribute</a>
-  </nav>
-</div>
-<router-outlet></router-outlet>
+<header>
+  <div class="jumbotron my-jumbotron">
+    <nav class="nav nav-masthead justify-content-center">
+      <a class="nav-link" routerLink="/home" routerLinkActive="active">Home</a>
+      <a class="nav-link" routerLink="/about" routerLinkActive="active">About</a>
+      <a class="nav-link" routerLink="/contribute" routerLinkActive="active">Contribute</a>
+    </nav>
+  </div>
+</header>
+<main [@fadeAnimation]="o.isActivated ? o.activatedRoute : ''">
+  <router-outlet #o="outlet"></router-outlet>
+</main>
