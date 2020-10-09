@@ -26,8 +26,9 @@
   .myMapsBtn {
     font-size: 12px;
     font-family: Roboto, Arial;
-    color: #3a84df;
+    color: #fff;
     cursor: pointer;
+    background-color: #3a84df;
   }
   
   .allCaps {
@@ -54,6 +55,10 @@
   
   .invalid-icon {
     color: rgb(250, 26, 26);
+  }
+
+  .map-icon{
+    color: #fff;
   }
   
   

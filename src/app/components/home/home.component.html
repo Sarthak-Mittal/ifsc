@@ -66,11 +66,11 @@
           <dt class="my-dt">ADDRESS</dt>
           <dd class="my-dd">
             {{ bankDetails.ADDRESS }} <br />
-            <span
+            <button mat-button
               class="myMapsBtn"
               (click)="redirectToGoogleMaps()"
-              >View on Google Maps
-            </span>
+              ><fa-icon class="map-icon" [icon]="faMapMarker"></fa-icon> View on Google Maps
+          </button>
           </dd>
         </dl>
       </div>
