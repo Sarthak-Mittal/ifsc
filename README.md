@@ -74,7 +74,18 @@ Alternatively see the GitHub documentation on [creating a pull request](https://
 4. Navigate your browser to `http://localhost:4200`.
 5. Make sure you have running internet connection to successfully hit API mentioned in [Description](#Description).
 
+### Run with Docker
 
+Are you a Docker fan who wants to just run the application and doesn't care about installing other dependencies or Do you just want to know as to how to run with Docker
+
+Follow the steps:
+
+1. Download and install [docker](https://docs.docker.com/get-docker/).
+2. If you are on Linux you need to run some [post-install steps](https://docs.docker.com/engine/install/linux-postinstall/) so that you won't need to run docker with sudo.
+3. On the root of this project simply run `docker build . -t "<image_name>:<image_tag>"`.
+4. After the image is built just run `docker run --net=host <image_name>:<image_tag>`.
+5. Navigate your browser to `http://localhost:4200`.
+6. Make sure you have running internet connection to successfully hit API mentioned in [Description](#Description).
 
 
 
