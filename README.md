@@ -2,23 +2,20 @@
 
 Go to check it out here [here](https://sarthak-mittal.github.io/ifsc/)
 
----
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 ![GitHub repo size](https://img.shields.io/github/repo-size/Sarthak-Mittal/Ifsc)
 ![GitHub contributors](https://img.shields.io/github/contributors/Sarthak-Mittal/Ifsc)
 ![GitHub stars](https://img.shields.io/github/stars/Sarthak-Mittal/Ifsc?style=social)
 ![GitHub forks](https://img.shields.io/github/forks/Sarthak-Mittal/Ifsc?style=social)
 
----
 
 ## Table of Contents
 
 - [Introduction](#Introduction)
 - [Description](#Description)
 - [Technologies Using](#Technologies-used)
-- [Contributers Guide](#Contributers-Guide)
 - [Getting Started - Local Development](#Getting-Started)
-
+- [Contributers Guide](#Contributers-Guide)
 ---
 
 ## Introduction
@@ -42,21 +39,6 @@ On the frontend we are using Angular and on the backend we are hitting a free AP
 - [Bootstrap](https://getbootstrap.com/docs/4.0/getting-started/introduction/) 4.5.2.
 
 
-
-## Contributers Guide
-
-To contribute to hassle free, follow these steps:
-
-1. Fork this repository.
-1. Create a branch: `git checkout -b <branch_name>`.
-1. Make your changes and commit them: `git commit -m '<commit_message>'`
-1. Push to the original branch: `git push origin <project_name>/<location>`
-1. Create the pull request.
-
-Alternatively see the GitHub documentation on [creating a pull request](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request).
-
-
-
 ## Getting Started
 
 ### To get started locally, follow these instructions:
@@ -74,17 +56,21 @@ Alternatively see the GitHub documentation on [creating a pull request](https://
 5. Make sure you have running internet connection to successfully hit API mentioned in [Description](#Description).
 
 
+## Contributers Guide
 
+Read [Contributors guidelines](https://github.com/sarthak-mittal/ifsc/blob/master/CONTRIBUTING.md) before submitting a PR or creating a new issue.
 
+To contribute hassle free, follow these steps:
 
+1. Fork this repository.
+1. Create a branch: `git checkout -b <branch_name>`.
+1. Make your changes and commit them: `git commit -m '<commit_message>'`
+1. Push to the original branch: `git push origin <project_name>/<location>`
+1. Create the pull request.
+1. Show your support by ⭐ the project.
 
-```javascript
-if (thisRepo.isAwesome()) {
-  // thanks in advance :p
-  starThisRepository();
-}
+Alternatively see the GitHub documentation on [creating a pull request](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request).
 
-```
 
 <sub><strong>If you find a bug or think something could be better, please file an issue! If you think a code change should be made, feel free to raise a PR.</strong></sub>
 
