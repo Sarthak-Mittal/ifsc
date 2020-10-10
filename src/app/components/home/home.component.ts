@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { FormGroup, FormControl, Validator, Validators } from '@angular/forms';
-import { faCheckCircle, faTimesCircle, faMapPin, faMapMarker } from '@fortawesome/free-solid-svg-icons';
+import { faCheckCircle, faTimesCircle, faMapMarker } from '@fortawesome/free-solid-svg-icons';
 import { BankDetails } from 'src/app/model/bank-details';
 import { BankService } from 'src/app/services/bank.service';
 
@@ -19,7 +19,6 @@ export class HomeComponent {
   });
   faCheckCircle = faCheckCircle;
   faTimesCircle = faTimesCircle;
-  faMapPin = faMapPin;
   faMapMarker = faMapMarker;
 
   constructor(private bankService: BankService) {}
