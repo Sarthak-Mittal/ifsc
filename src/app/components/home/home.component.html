@@ -6,7 +6,7 @@
       <p class="lead sub-heading">
         Enter code to get all the important information about the bank branch.
         <!-- Added temporarily to make it easy to test-->
-         Sample IFSC
+        Sample IFSC
         <b><span (click)="copyText('ICIC0000816')">ICIC0000816</span></b> (Click
         to copy)
       </p>
@@ -16,31 +16,13 @@
 
 <div class="container">
   <form [formGroup]="bank" class="input-group">
-    <input
-      type="search"
-      class="form-control allCaps clearable"
-      formControlName="ifsc"
-      placeholder="IFSC"
-      aria-label="IFSC"
-      (keyup)="handleKeyUp($event)"
-      maxlength="11"
-      aria-describedby="basic-addon2"
-      required
-    />
+    <input type="search" class="form-control allCaps clearable" formControlName="ifsc" placeholder="IFSC"
+      aria-label="IFSC" (keyup)="handleKeyUp($event)" maxlength="11" aria-describedby="basic-addon2" required />
 
     <div class="input-group-append">
-      <button
-        class="btn btn-outline-secondary search-button"
-        type="button"
-        [disabled]="!bank.valid"
-        (click)="submit()"
-      >
-        <span
-          class="spinner-border spinner-border-sm search-spinner"
-          [ngClass]="{ 'search-spinner--hide': !apiTransitState }"
-          role="status"
-          aria-hidden="true"
-        ></span>
+      <button class="btn btn-outline-secondary search-button" type="button" [disabled]="!bank.valid" (click)="submit()">
+        <span class="spinner-border spinner-border-sm search-spinner"
+          [ngClass]="{ 'search-spinner--hide': !apiTransitState }" role="status" aria-hidden="true"></span>
         <span>Search</span>
       </button>
     </div>
@@ -66,10 +48,7 @@
         <dt class="my-dt">ADDRESS</dt>
         <dd class="my-dd">
           {{ bankDetails.ADDRESS }} <br />
-          <span
-            class="myMapsBtn"
-            (click)="redirectToGoogleMaps()"
-            >
+          <span class="myMapsBtn" (click)="redirectToGoogleMaps()">
             <fa-icon class="fa-lg" [icon]="faMapMarker" aria-hidden="true"></fa-icon>
             View on Google Maps
           </span>
