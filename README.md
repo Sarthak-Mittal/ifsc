@@ -4,12 +4,7 @@ Go to check it out here [here](https://sarthak-mittal.github.io/ifsc/)
 
 ---
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Website](https://img.shields.io/badge/website-up-%2338B2AC)](https://sarthak-mittal.github.io/ifsc/)
-![Hits](https://hitcounter.pythonanywhere.com/count/tag.svg?url=https%3A%2F%2Fgithub.com%2FSarthak-Mittal%2Fifsc)
-![Hits](https://hitcounter.pythonanywhere.com/count/tag.svg?url=https://github.com/Sarthak-Mittal/ifsc)
-[![LinkedIn](https://img.shields.io/badge/linkedin-connect-blue)](https://www.linkedin.com/in/sarthakmittal9/)
-
+![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 ![GitHub repo size](https://img.shields.io/github/repo-size/Sarthak-Mittal/Ifsc)
 ![GitHub contributors](https://img.shields.io/github/contributors/Sarthak-Mittal/Ifsc)
 ![GitHub stars](https://img.shields.io/github/stars/Sarthak-Mittal/Ifsc?style=social)
@@ -94,4 +89,5 @@ if (thisRepo.isAwesome()) {
 
 <sub><strong>If you find a bug or think something could be better, please file an issue! If you think a code change should be made, feel free to raise a PR.</strong></sub>
 
-[![Open Source Love](https://badges.frapsoft.com/os/v2/open-source.svg?v=103)](https://github.com/sarthak-mittal) [![GitHub followers](https://img.shields.io/github/followers/sarthak-mittal.svg?label=follow%20@sarthak-mittal&style=flat&logo=github)](https://github.com/sarthak-mittal/)
+[![Open Source Love](https://badges.frapsoft.com/os/v2/open-source.svg?v=103)](https://github.com/sarthak-mittal) [![GitHub followers](https://img.shields.io/github/followers/sarthak-mittal.svg?label=follow%20@sarthak-mittal&style=flat&logo=github)](https://github.com/sarthak-mittal/) [![LinkedIn](https://img.shields.io/badge/linkedin-connect-blue)](https://www.linkedin.com/in/sarthakmittal9/)
+
