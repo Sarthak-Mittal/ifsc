@@ -81,4 +81,10 @@ export class HomeComponent {
     document.body.removeChild(selBox);
   }
 
+  ifPhoneValid(phoneNo: any){
+    if(phoneNo == '' || phoneNo == '00' || phoneNo == null)
+      return false
+
+    return true
+  }
 }

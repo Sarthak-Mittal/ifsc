@@ -38,10 +38,10 @@
         <dd class="my-dd">{{ bankDetails.BANK }}</dd>
       </dl>
     </div>
-    <div class="col-6 col-sm-6 col-md-3">
+    <div class="col-6 col-sm-6 col-md-3" *ngIf="ifPhoneValid(bankDetails.CONTACT)">
       <dl class="my-dl">
         <dt class="my-dt">CONTACT</dt>
-        <dd class="my-dd">{{ bankDetails.CONTACT }}</dd>
+        <dd class="my-dd myCallBtn"><a href="tel:{{ bankDetails.CONTACT }}"></a>{{ bankDetails.CONTACT }}</dd>
       </dl>
     </div>
     <div class="col-12 col-sm-12 col-md-6">
