@@ -1,40 +1,45 @@
 <div class="jumbotron jumbotron-fluid shadow-lg p-3 mb-5 bg-white rounded">
   <div class="container">
     <p class="lead sub-heading"><span class="display-4">About</span></p>
+    <p class="lead sub-heading">
+      Get to know about this project and how it works.
+    </p>
   </div>
 </div>
 <div class="container">
-  <h2>About this project</h2>
   <p>This project help you get your bank details only using your IFSC code. By using this service, you can get the
     details of your</p>
   <ul>
     <li>Bank name.</li>
     <li>Bank contact number.</li>
     <li>Bank branch detail location and address completed with Google Map link.</li>
-    <li>Payment and settlement systems like RTGS, NEFT, IMPS, and UPI.</li>
+    <li>Availability of Payment and settlement systems like RTGS, NEFT, IMPS, and UPI.</li>
   </ul>
   <p>We hope this project will help serve the purpose for people who might want to look up some information about
     their bank branch.</p>
-  <p>If you want to contribute to this project, please follow <a href="https://github.com/Sarthak-Mittal/ifsc">this
-      link</a> to see the repo.</p>
+  <p>If you wish to contribute to this project, Head <a href="https://github.com/Sarthak-Mittal/ifsc">here</a> to see
+    the Github repository. Report feedbacks <a href="https://github.com/Sarthak-Mittal/ifsc/issues">here</a>.</p>
+
+  <hr>
+
   <h2>What is IFSC?</h2>
-  <p>IFSC is the Indian Financial System Code which consist of alphanumeric code that facilitates electronic funds
-    transfer in India.
-    A code uniquely identifies each bank branch participating in the three main Payment and settlement systems in
-    India: the Real Time Gross Settlement (RTGS),
-    National Electronic Fund Transfer (NEFT) and Immediate Payment Service (IMPS) systems. To see the list of </p>
-  <p>Bank-wise lists of IFS Codes are available with all the bank-branches participating in inter bank electronic
-    funds transfer.
-    A list of bank-branches participating in NEFT/RTGS and their IFS Code is available on the website of <a
-      href="https://www.rbi.org.in/scripts/neft.aspx">Reserve Bank of India</a>.
+
+  <p>IFSC or Indian Financial System Code is an alpha-numeric code that uniquely identifies a bank-branch participating
+    in the NEFT system. It’s a 11-digit code with the first 4 alpha characters representing the bank, and the last 6
+    characters representing the branch. The 5th character is 0 (zero).
   </p>
+  <p>
+    IFSC is used by the NEFT system to identify the originating / destination banks / branches and also to route the
+    messages appropriately to the concerned banks / branches.
+  </p>
+
   <hr>
   <a href="https://razorpay.com/"><img src="https://razorpay.com/assets/razorpay-logo.svg" width="150px" height="auto"
       alt="razopay-logo" style="margin-bottom: 10px;" /></a>
-  <p>This project is using <a href="https://razorpay.com/docs/api/">RazorPay API</a> to fetch the bank data.</p>
-  <p><a href="https://razorpay.com/">Razorpay</a> is the only payments solution in India that allows businesses to
-    accept, process and disburse payments with its product suite.
-    It gives you access to all payment modes including credit card, debit card, netbanking, UPI and
-    popular wallets including JioMoney, Mobikwik, Airtel Money, FreeCharge, Ola Money and PayZapp.</p>
-  <p>You can check their projects and repo on <a href="https://github.com/razorpay">this link</a>.</p>
+  <p>This project is using <a href="https://ifsc.razorpay.com/">Razorpay IFSC Toolkit</a> to fetch data.</p>
+  <p><a href="https://razorpay.com/">Razorpay</a> is the only converged payments solution company in India that
+    allows your business to accept, process, and disburse payments via its product suite. With Razorpay, you have access
+    to all payment modes, including credit and debit cards, UPI, and popular mobile wallets
+  </p>
+  <p>This <a href="https://github.com/razorpay/ifsc-api">repository</a> by Razorpay is the backbone of this project.</p>
 </div>
