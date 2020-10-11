@@ -19,10 +19,10 @@
     <input type="search" class="form-control allCaps clearable" formControlName="ifsc" placeholder="IFSC" 
       [ngClass]="{ 'is-invalid': !bank.controls['ifsc'].valid && bank.controls['ifsc'].hasError('invalid') }"
       aria-label="IFSC" (keyup)="handleKeyUp($event)" maxlength="11" aria-describedby="basic-addon2" required />
-    <div class="invalid-feedback order-last">Invalid IFSC code</div>  
+    <div class="invalid-feedback order-last">This is an invalid IFSC</div>  
 
     <div class="input-group-append">
-      <button class="btn btn-outline-secondary search-button" type="button" (click)="submit()">
+      <button class="btn btn-outline-secondary search-button" type="button" [disabled]="!bank.valid" (click)="submit()">
         <span class="spinner-border spinner-border-sm search-spinner"
           [ngClass]="{ 'search-spinner--hide': !apiTransitState }" role="status" aria-hidden="true"></span>
         <span>Search</span>
