@@ -7,10 +7,12 @@
 </div>
 
 <div class="container">
-    <p>If you wish to contribute to this project, Head to the <a href="https://github.com/Sarthak-Mittal/ifsc">Github repository</a>.</p>
+    <p>If you wish to contribute to this project, Head to the <a href="https://github.com/Sarthak-Mittal/ifsc">Github
+            repository</a>.</p>
 
     <ul>
-        <li>Read the <a href="https://github.com/Sarthak-Mittal/ifsc/blob/master/CONTRIBUTING.md">contributor guidelines</a> of the project</li>
+        <li>Read the <a href="https://github.com/Sarthak-Mittal/ifsc/blob/master/CONTRIBUTING.md">contributor
+                guidelines</a> of the project</li>
         <li>Get the project running locally</li>
         <li>Leave a message on a task you'd like to work on</li>
         <li>Get to work!</li>
@@ -20,4 +22,45 @@
     <p> Report feedbacks and bugs <a href="https://github.com/Sarthak-Mittal/ifsc/issues">here</a>.</p>
     <hr>
     <p> Thanks to all the <a href="https://github.com/Sarthak-Mittal/ifsc/graphs/contributors">contributors</a>!</p>
+    <!--     
+    <div *ngFor="let contributor of contributors">
+        <div class="card" style="width: 18rem;">
+            <img class="card-img-top" src="{{contributor.avatar_url}}" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">{{contributor.login}}</h5>              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="{{contributor.url}}" class="btn btn-primary">{{contributor.login}}</a>
+            </div>
+        </div>
+    </div> -->
+    <!-- <div class="card-deck my-card-deck" *ngFor="let contributor of contributors">
+        <div class="card my-card">
+          <img class="card-img-top" src="{{contributor.avatar_url}}" alt="{{contributor.login}}">
+          <div class="card-body">
+            <p class="card-text"><small class="text-muted">{{contributor.login}}</small></p>
+          </div>
+        </div>
+      </div> -->
+
+    <!-- <div class="container">
+        <div class="row col-md-5 widget">
+            <div class="widget-content">
+                <ul class="widget-user-list" *ngFor="let contributor of contributors">
+                    <li><a href="#"><img src="{{contributor.avatar_url}}" alt=""></a></li>
+                </ul>
+            </div>
+        </div>
+    </div> -->
+
+
+
+    <div class="container testimonials">
+        <div class="row">
+            <div class="avatar col-4 col-sm-3 col-md-2  text-center" *ngFor="let contributor of contributors">
+                <a href="{{contributor.html_url}}">
+                    <img class="img-circle" src="{{contributor.avatar_url}}" alt="{{contributor.login}}">
+                </a>
+                <p class="text-center"><a href="{{contributor.html_url}}">{{contributor.login}}</a></p>
+            </div>
+        </div>
+    </div>
 </div>

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Contributors } from 'src/app/model/contributors';
+import { GithubService } from 'src/app/services/github.service';
 
 @Component({
   selector: 'app-contribute',
@@ -7,9 +9,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContributeComponent implements OnInit {
 
-  constructor() { }
+  contributors : Contributors;
+
+  constructor(private githubService: GithubService) { }
 
   ngOnInit(): void {
+    this.githubService.getContributors().subscribe(
+      (data: Contributors) => {
+        this.contributors = data;
+      },
+      (error) => {
+        console.log(error);
+      }
+    );
   }
 
 }
