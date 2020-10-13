@@ -7,6 +7,14 @@
     </nav>
   </div>
 </header>
-<main [@fadeAnimation]="o.isActivated ? o.activatedRoute : ''">
+<main [@routeState]="o.isActivated ? o.activatedRoute : ''">
+  <!-- [@fadeAnimation]="o.isActivated ? o.activatedRoute : ''" -->
   <router-outlet #o="outlet"></router-outlet>
 </main>
+<footer class="footer blog-footer">
+  <p>IFSC Basic Footer <a href="https://google.com/">Google</a> by <a
+      href="https://hackerrank.com/rohanshenoy96">@RohanShenoy</a>.</p>
+  <p>
+    <a href="#">Back to top</a>
+  </p>
+</footer>

@@ -1,13 +1,13 @@
 import { Component } from '@angular/core';
-import { fadeAnimation } from './animations/animations';
+import { routeState } from './animations/animations';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
-  animations: [fadeAnimation]
+  animations: [routeState]
 })
 export class AppComponent {
-
+  
 
 }
