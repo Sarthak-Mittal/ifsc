@@ -24,7 +24,7 @@ export class HomeComponent {
   constructor(private bankService: BankService) {}
 
   submit() {
-    const ifscCode = this.bank.controls['ifsc'].value;
+    let ifscCode = this.bank.controls['ifsc'].value.toUpperCase();
     console.log('ifsc::', ifscCode);
     let ifscRegex = new RegExp("^[A-Z]{4}0[A-Z0-9]{6}$");
     let isValidIfsc = ifscRegex.test(ifscCode);
