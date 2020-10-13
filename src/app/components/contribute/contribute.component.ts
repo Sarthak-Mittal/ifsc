@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Contributors } from 'src/app/model/contributors';
 import { GithubService } from 'src/app/services/github.service';
+import { faCodeBranch } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-contribute',
@@ -10,6 +11,7 @@ import { GithubService } from 'src/app/services/github.service';
 export class ContributeComponent implements OnInit {
 
   contributors : Contributors;
+  faCodeBranch = faCodeBranch;
 
   constructor(private githubService: GithubService) { }
 

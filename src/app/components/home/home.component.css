@@ -61,3 +61,7 @@
   .invalid-icon {
     color: rgb(250, 26, 26);
   }
+
+  .myIcons{
+    padding-right: 5px;
+  }
