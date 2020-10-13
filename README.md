@@ -2,6 +2,7 @@
 
 Go to check it out here [here](https://sarthak-mittal.github.io/ifsc/)
 
+![Continuous Deployment](https://github.com/Sarthak-Mittal/ifsc/workflows/Continuous%20Deployment/badge.svg)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 ![GitHub repo size](https://img.shields.io/github/repo-size/Sarthak-Mittal/Ifsc)
 ![GitHub contributors](https://img.shields.io/github/contributors/Sarthak-Mittal/Ifsc)
