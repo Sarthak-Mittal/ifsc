@@ -1,12 +1,22 @@
-<header>
-  <div class="jumbotron my-jumbotron">
-    <nav class="nav nav-masthead justify-content-center">
-      <a class="nav-link" routerLink="/home" routerLinkActive="active">Home</a>
-      <a class="nav-link" routerLink="/about" routerLinkActive="active">About</a>
-      <a class="nav-link" routerLink="/contribute" routerLinkActive="active">Contribute</a>
-    </nav>
-  </div>
-</header>
-<main [@fadeAnimation]="o.isActivated ? o.activatedRoute : ''">
-  <router-outlet #o="outlet"></router-outlet>
-</main>
+<div class="d-flex flex-column align-items-stretch u-full-height" #container>
+  <header>
+    <div class="jumbotron my-jumbotron">
+      <nav class="nav nav-masthead justify-content-center">
+        <a class="nav-link" routerLink="/home" routerLinkActive="active">Home</a>
+        <a class="nav-link" routerLink="/about" routerLinkActive="active">About</a>
+        <a class="nav-link" routerLink="/contribute" routerLinkActive="active">Contribute</a>
+      </nav>
+    </div>
+  </header>
+  <main [@routeState]="o.isActivated ? o.activatedRoute : ''" class="flex-grow-1">
+    <!-- [@fadeAnimation]="o.isActivated ? o.activatedRoute : ''" -->
+    <router-outlet #o="outlet"></router-outlet>
+  </main>
+  <footer class="footer blog-footer">
+    <p>IFSC Basic Footer <a href="https://google.com/">Google</a> by <a
+        href="https://hackerrank.com/rohanshenoy96">@RohanShenoy</a>.</p>
+    <p>
+      <a (click)="scrollToTop()">Back to top</a>
+    </p>
+  </footer>
+</div>
