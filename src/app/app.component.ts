@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 import { routeState } from './animations/animations';
 
 @Component({
@@ -8,6 +8,11 @@ import { routeState } from './animations/animations';
   animations: [routeState]
 })
 export class AppComponent {
-  
 
+  @ViewChild('container') container: ElementRef;
+
+  scrollToTop() {
+    //this will provide smooth animation for the scroll
+    this.container.nativeElement.scrollIntoView({ behavior: 'smooth', block: 'center' })
+  }
 }
