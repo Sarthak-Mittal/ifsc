@@ -2,6 +2,7 @@
 
 Go to check it out here [here](https://sarthak-mittal.github.io/ifsc/)
 
+![Continuous Deployment](https://github.com/Sarthak-Mittal/ifsc/workflows/Continuous%20Deployment/badge.svg)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 ![GitHub repo size](https://img.shields.io/github/repo-size/Sarthak-Mittal/Ifsc)
 ![GitHub contributors](https://img.shields.io/github/contributors/Sarthak-Mittal/Ifsc)
@@ -55,6 +56,18 @@ On the frontend we are using Angular and on the backend we are hitting a free AP
 4. Navigate your browser to `http://localhost:4200`.
 5. Make sure you have running internet connection to successfully hit API mentioned in [Description](#Description).
 
+### Run with Docker
+
+Are you a Docker fan who wants to just run the application and doesn't care about installing other dependencies or Do you just want to know as to how to run with Docker
+
+Follow the steps:
+
+1. Download and install [docker](https://docs.docker.com/get-docker/).
+2. If you are on Linux you need to run some [post-install steps](https://docs.docker.com/engine/install/linux-postinstall/) so that you won't need to run docker with sudo.
+3. On the root of this project simply run `docker build . -t "<image_name>:<image_tag>"`.
+4. After the image is built just run `docker run --net=host <image_name>:<image_tag>`.
+5. Navigate your browser to `http://localhost:4200`.
+6. Make sure you have running internet connection to successfully hit API mentioned in [Description](#Description).
 
 ## Contributers Guide
 
