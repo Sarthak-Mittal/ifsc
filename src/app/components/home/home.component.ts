@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { FormGroup, FormControl, Validator, Validators } from '@angular/forms';
-import { faCheckCircle, faTimesCircle, faMapMarker } from '@fortawesome/free-solid-svg-icons';
+import { faCheckCircle, faTimesCircle, faMapMarkerAlt, faPhoneAlt, faLandmark } from '@fortawesome/free-solid-svg-icons';
 import { BankDetails } from 'src/app/model/bank-details';
 import { BankService } from 'src/app/services/bank.service';
 
@@ -19,13 +19,22 @@ export class HomeComponent {
   });
   faCheckCircle = faCheckCircle;
   faTimesCircle = faTimesCircle;
-  faMapMarker = faMapMarker;
+  faMapMarkerAlt = faMapMarkerAlt;
+  faPhoneAlt = faPhoneAlt;
+  faLandmark = faLandmark;
 
   constructor(private bankService: BankService) {}
 
   submit() {
-    const ifscCode = this.bank.controls['ifsc'].value;
+    let ifscCode = this.bank.controls['ifsc'].value.toUpperCase();
     console.log('ifsc::', ifscCode);
+    let ifscRegex = new RegExp("^[A-Z]{4}0[A-Z0-9]{6}$");
+    let isValidIfsc = ifscRegex.test(ifscCode);
+
+    if(!isValidIfsc) {
+      this.bank.controls['ifsc'].setErrors({'invalid': true});
+      return;
+    }
     this.apiTransitState = true;
 
     this.bankService.getBranchData(ifscCode).subscribe(
@@ -40,6 +49,7 @@ export class HomeComponent {
         this.bankDetails = null;
         this.toggleDisplay = false;
         this.apiTransitState = false;
+        this.bank.controls['ifsc'].setErrors({'invalid': true});
       }
     );
 
@@ -73,4 +83,10 @@ export class HomeComponent {
     document.body.removeChild(selBox);
   }
 
+  ifPhoneValid(phoneNo: any){
+    if(phoneNo == '' || phoneNo == '00' || phoneNo == null)
+      return false
+
+    return true
+  }
 }

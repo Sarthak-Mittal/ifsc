@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { faAddressCard } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-about',
@@ -7,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AboutComponent implements OnInit {
 
+  faAddressCard = faAddressCard;
   constructor() { }
 
   ngOnInit(): void {
