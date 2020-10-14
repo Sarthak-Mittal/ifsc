@@ -13,10 +13,22 @@
     <router-outlet #o="outlet"></router-outlet>
   </main>
   <footer class="footer blog-footer">
-    <p>IFSC Basic Footer <a href="https://google.com/">Google</a> by <a
-        href="https://hackerrank.com/rohanshenoy96">@RohanShenoy</a>.</p>
-    <p>
-      <a (click)="scrollToTop()">Back to top</a>
-    </p>
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+          <a href="https://github.com/Sarthak-Mittal/ifsc/">Made with
+            <fa-icon class="fa fa-sm" [icon]="faHeart" style="color: red;" aria-hidden="true"></fa-icon>
+            on
+            <img class="github_logo" src="../assets/GitHub_Logo.png" />
+          </a>
+        </div>
+        <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+          <a (click)="scrollToTop()">
+            <fa-icon class="fa fa-lg backToTop" [icon]="faChevronUp" aria-hidden="true">
+            </fa-icon>
+          </a>
+        </div>
+      </div>
+    </div>
   </footer>
 </div>

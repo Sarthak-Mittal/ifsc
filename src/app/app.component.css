@@ -12,14 +12,19 @@
 }
 
 .blog-footer {
-  margin-top: 2rem;
-  padding: 2.5rem 0;
-  color: #999;
+  margin-top: 3rem;
+  padding: 1.5rem 8rem;
   text-align: center;
-  background-color: #f9f9f9;
-  border-top: .05rem solid #e5e5e5;
+  background-color: white; /* For browsers that do not support gradients */
+  background-image: linear-gradient(white, #706f6f);
 }
 
-.blog-footer p:last-child {
-  margin-bottom: 0;
+.github_logo{
+  width:4rem;
+  height:1.5rem;
+}
+
+.backToTop{
+  color: rgb(92, 92, 92); 
+  cursor: pointer;
 }
